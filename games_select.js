@@ -7,10 +7,9 @@ export default class GameSelection extends Phaser.Scene {
         this.selectedMode = data.modeIndex || 0;
         this.modeName = data.modeName || 'Game Mode';
         this.gamesByMode = {
-            0: ['Game 1', 'Game 2', 'Game 3'],
+            0: ['Dino Run', 'Game 2', 'Game 3'],
             1: ['Game 4', 'Game 5', 'Game 6'],
-            2: ['Game 7', 'Game 8', 'Game 9'],
-            3: ['Game 10', 'Game 11', 'Game 12']
+            2: ['Game 7', 'Game 8', 'Game 9']
         };
         this.games = this.gamesByMode[this.selectedMode] || [];
         this.currentIndex = 0;
@@ -67,9 +66,13 @@ export default class GameSelection extends Phaser.Scene {
             this.clickSound.play();
             console.log(`User selected: ${this.games[this.currentIndex]}`);
             // Placeholder for future actual game start
-            if (this.games[this.currentIndex] === 'Game 1') {
-                this.handleGame1Click();
-            } else {
+            if (this.games[this.currentIndex] === 'Dino Run') {
+                // this.handleGame1Click();
+                window.open('https://dino-iota-bice.vercel.app', '_blank');
+            } else if (this.games[this.currentIndex] === 'Game 4') {
+                this.handleGame4Click();
+            }
+            else {
                 console.log(`Starting game: ${this.games[this.currentIndex]}`);
             }
         });
@@ -130,10 +133,9 @@ export default class GameSelection extends Phaser.Scene {
             dot.setFillStyle(i === this.currentIndex ? 0xffffff : 0x888888);
         });
     }
-    
     handleGame1Click() {
         if (!this.scene.get('DinoScene')) {
-            this.scene.add('DinoScene', new window.DinoScene());
+            this.scene.add('DinoScene', new DinoScene());
         }
         this.scene.transition({
             target: 'DinoScene',
@@ -141,5 +143,16 @@ export default class GameSelection extends Phaser.Scene {
             moveAbove: true
         });
     }
-    
+
+    handleGame4Click() {
+        if (!this.scene.get('OldDinoScene')) {
+            this.scene.add('OldDinoScene', new window.DinoScene());
+        }
+        this.scene.transition({
+            target: 'OldDinoScene',
+            duration: 500,
+            moveAbove: true
+        });
+    }
+
 }

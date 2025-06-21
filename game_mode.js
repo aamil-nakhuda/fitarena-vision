@@ -1,7 +1,9 @@
+
 export default class GameMode extends Phaser.Scene {
     constructor() {
         super({ key: 'GameMode' });
-        this.modes = ['Game Mode 1', 'Game Mode 2', 'Game Mode 3', 'Game Mode 4'];
+        this.modes = ['Endurance Mode', 'Skill Mode', 'Race Against Time'];
+        this.icon_modes = ['💪', '🧠', '⏰'];
         this.currentIndex = 0;
     }
 
@@ -13,6 +15,13 @@ export default class GameMode extends Phaser.Scene {
         this.load.image('icon_placeholder', 'assets/images/main_menu/btn_play.png');
         this.load.image('panel_bg', 'assets/images/game_mode/white_panel.png');
         this.load.audio('snd_click', 'assets/audio/click-b.ogg');
+
+        WebFont.load({
+            google: {
+                families: ['Audiowide']
+            },
+        });
+        
     }
 
     create() {
@@ -66,19 +75,28 @@ export default class GameMode extends Phaser.Scene {
             
 
         // === Responsive Icon ===
-        const iconSize = 0.1 * w; // 10% of screen width
-        this.icon = this.add.image(panelX - panelWidth * 0.3, panelY, 'icon_placeholder')
-            .setDisplaySize(iconSize, iconSize)
-            .setOrigin(0.5);
+        const iconSize = 0.03 * w; // 10% of screen width
+        // this.icon = this.add.image(panelX - panelWidth * 0.3, panelY, 'icon_placeholder')
+        //     .setDisplaySize(iconSize, iconSize)
+        //     .setOrigin(0.5);
+
+        // const iconSize = Math.round(0.03 * w); // ~4.5% of screen width
+        this.icon = this.add.text(panelX - panelWidth * 0.3-30, panelY, '', {
+            // fontFamily: 'CustomFont',
+            padding: { top: 10, bottom: 10 },
+            align: 'center',
+            fontSize: `${iconSize}px`,
+        }).setOrigin(0.5); 
+
+
 
         // === Responsive Title ===
         const fontSize = Math.round(0.03 * w); // ~4.5% of screen width
-        this.title = this.add.text(panelX + panelWidth * 0.05, panelY, '', {
-            fontFamily: 'CustomFont',
+        this.title = this.add.text(panelX + panelWidth * 0.05-30, panelY, '', {
+            fontFamily: 'Audiowide',
             fontSize: `${fontSize}px`,
             color: '#000000',
-            fontStyle: 'bold',
-        }).setOrigin(0.3, 0.5); // Left-aligned in panel
+        }).setOrigin(0.4, 0.5); 
 
         // Pagination Dots
         const totalWidth = this.modes.length * 40;
@@ -117,6 +135,7 @@ export default class GameMode extends Phaser.Scene {
 
     updateDisplay() {
         this.title.setText(this.modes[this.currentIndex]);
+        this.icon.setText(this.icon_modes[this.currentIndex]);
         this.leftArrow.setAlpha(this.currentIndex === 0 ? 0.3 : 1);
         this.rightArrow.setAlpha(this.currentIndex === this.modes.length - 1 ? 0.3 : 1);
 

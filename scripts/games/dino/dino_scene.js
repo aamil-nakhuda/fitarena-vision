@@ -1,8 +1,8 @@
 /// <reference path="C:/Users/ME/Desktop/levelsbug/phaser.d.ts" />
 // window.DinoScene = class DinoScene extends Phaser.Scene {
-export default class DinoScene extends Phaser.Scene {
+export default class OldDinoScene extends Phaser.Scene {
     constructor() {
-        super({ key: 'DinoScene' });
+        super({ key: 'OldDinoScene' });
         this.score = 0;
         this.gameSpeed = 200;
     }
@@ -200,7 +200,7 @@ async function loadPoseDependencies() {
     await loadScript("https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection");
 
     // Now load the pose logic (which assumes all above are ready)
-    await loadScript("scripts/games/dino/pose.js");
+    await loadScript("scripts/games/dino/g4_pose.js");
     
     // window.resizeGame()
 
