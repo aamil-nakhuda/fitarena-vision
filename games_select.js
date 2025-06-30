@@ -16,7 +16,7 @@ export default class GameSelection extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bg', 'assets/images/menu_bg.png');
+        this.load.image('bg_lvl', 'assets/images/lvl_bg.png');
         this.load.image('btn_back', 'assets/images/game_mode/arrow_basic_w.png');
         this.load.image('btn_left', 'assets/images/game_mode/arrow_decorative_w.png');
         this.load.image('btn_right', 'assets/images/game_mode/arrow_decorative_e.png');
@@ -29,7 +29,7 @@ export default class GameSelection extends Phaser.Scene {
         const w = this.scale.width;
         const h = this.scale.height;
 
-        this.bg = this.add.image(0, 0, 'bg').setOrigin(0, 0).setDisplaySize(w, h);
+        this.bg = this.add.image(0, 0, 'bg_lvl').setOrigin(0, 0).setDisplaySize(w, h);
         this.clickSound = this.sound.add('snd_click', { volume: 1 });
 
         // Back to Game Modes
@@ -68,9 +68,10 @@ export default class GameSelection extends Phaser.Scene {
             // Placeholder for future actual game start
             if (this.games[this.currentIndex] === 'Dino Run') {
                 // this.handleGame1Click();
-                window.open('https://dino-iota-bice.vercel.app', '_blank');
+                window.open('https://dino-g1.vercel.app', '_blank');
             } else if (this.games[this.currentIndex] === 'Game 4') {
-                this.handleGame4Click();
+                window.open('https://dino-g4.vercel.app', '_blank');
+                // this.handleGame4Click();
             }
             else {
                 console.log(`Starting game: ${this.games[this.currentIndex]}`);
@@ -84,10 +85,9 @@ export default class GameSelection extends Phaser.Scene {
 
         const fontSize = Math.round(0.03 * w);
         this.title = this.add.text(panelX + panelWidth * 0.05, panelY, '', {
-            fontFamily: 'CustomFont',
+            fontFamily: 'AudioWide',
             fontSize: `${fontSize}px`,
             color: '#000000',
-            fontStyle: 'bold',
         }).setOrigin(0.3, 0.5);
 
         const totalWidth = this.games.length * 40;

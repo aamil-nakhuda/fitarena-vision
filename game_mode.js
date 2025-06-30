@@ -8,7 +8,7 @@ export default class GameMode extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bg', 'assets/images/menu_bg.png');
+        this.load.image('bg_lvl', 'assets/images/lvl_bg.png');
         this.load.image('btn_back', 'assets/images/game_mode/arrow_basic_w.png');
         this.load.image('btn_left', 'assets/images/game_mode/arrow_decorative_w.png');
         this.load.image('btn_right', 'assets/images/game_mode/arrow_decorative_e.png');
@@ -31,7 +31,7 @@ export default class GameMode extends Phaser.Scene {
         this.isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
         this.isMobileLandscape = this.isMobile && w > h;
 
-        this.bg = this.add.image(0, 0, 'bg').setOrigin(0, 0).setDisplaySize(w, h);
+        this.bg = this.add.image(0, 0, 'bg_lvl').setOrigin(0, 0).setDisplaySize(w, h);
         this.clickSound = this.sound.add('snd_click', { volume: 1 });
 
         // Back button
