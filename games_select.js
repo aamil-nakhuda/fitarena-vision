@@ -7,8 +7,8 @@ export default class GameSelection extends Phaser.Scene {
         this.selectedMode = data.modeIndex || 0;
         this.modeName = data.modeName || 'Game Mode';
         this.gamesByMode = {
-            0: ['Dino Run', 'Game 2', 'Game 3'],
-            1: ['Dino Run', 'Game 5', 'Game 6'],
+            0: ['Dino Run (E)', 'Game 2', 'Game 3'],
+            1: ['Dino Run (S)', 'Game 5', 'Game 6'],
             2: ['Game 7', 'Game 8', 'Game 9']
         };
         this.games = this.gamesByMode[this.selectedMode] || [];
@@ -66,10 +66,10 @@ export default class GameSelection extends Phaser.Scene {
             this.clickSound.play();
             console.log(`User selected: ${this.games[this.currentIndex]}`);
             // Placeholder for future actual game start
-            if (this.games[this.currentIndex] === 'Dino Run') {
+            if (this.games[this.currentIndex] === 'Dino Run (E)') {
                 // this.handleGame1Click();
                 window.open('https://dino-g1.vercel.app', '_blank');
-            } else if (this.games[this.currentIndex] === 'Game 4') {
+            } else if (this.games[this.currentIndex] === 'Dino Run (S)') {
                 window.open('https://dino-g4.vercel.app', '_blank');
                 // this.handleGame4Click();
             }
