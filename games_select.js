@@ -8,7 +8,7 @@ export default class GameSelection extends Phaser.Scene {
         this.modeName = data.modeName || 'Game Mode';
         this.gamesByMode = {
             0: ['Dino Run', 'Game 2', 'Game 3'],
-            1: ['Game 4', 'Game 5', 'Game 6'],
+            1: ['Dino Run', 'Game 5', 'Game 6'],
             2: ['Game 7', 'Game 8', 'Game 9']
         };
         this.games = this.gamesByMode[this.selectedMode] || [];
