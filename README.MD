@@ -98,7 +98,7 @@ The complete documentation is available in PDF format
 #### Laptop Screenshots
 [Laptop Screenshots](images/FitArena-Vision-LaptopScreenshots.pdf)
 #### How it would look like people using FitArena Vision
-[How it would look like people using FitArena Vision](images/People-using-FitArenaVision.pdf)
+[How it would look like people using FitArena Vision](images/PeopleUsing_FitArenaVision.pdf)
 
 ---
 
