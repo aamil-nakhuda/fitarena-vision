@@ -92,6 +92,14 @@ The complete documentation is available in PDF format
 
 ---
 
+## 📊 Presentation
+
+The complete presentation is available in PDF format 
+
+👉🔗 [Click here to view the full FitArena Vision Presentation (PDF))](docs/FitArenaVision-Presentation.pdf)
+
+---
+
 ## 📸 Mockups / Screenshots
 #### Mobile Screenshots
 [Mobile Screenshots](images/FitArena-Vision-MobileScreenshots.pdf)
