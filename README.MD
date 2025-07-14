@@ -108,6 +108,8 @@ The complete presentation is available in PDF format
 #### How it would look like people using FitArena Vision
 [How it would look like people using FitArena Vision](images/PeopleUsing_FitArenaVision.pdf)
 
+##### Stock Images & Mockups are designed by Freepik & Pexels
+
 ---
 
 ## 🔒 License
