@@ -86,6 +86,7 @@ The app was rigorously tested in the following ways:
 ## 📄 Documentation
 
 The complete documentation is available in PDF format
+
 ![Preview](docs/cover_page.png)  
 
 👉🔗 [Click here to read the full FitArena Vision Documentation (PDF))](docs/FitArena-Vision-Documentation.pdf)
