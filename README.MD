@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Web--based-blue)
 ![Tech Stack](https://img.shields.io/badge/Tech%20Stack-JavaScript%2C%20Phaser.js%2C%20TensorFlow.js-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://fitarena.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-green)](https://fitarena-vision.vercel.app/)
 ![Contributors](https://img.shields.io/badge/Maintained%20By-Solo%20Developer-informational)
 ![Mobile Support](https://img.shields.io/badge/Mobile%20Support-Yes-blueviolet)
 ![Repo Size](https://img.shields.io/github/repo-size/aamil-nakhuda/fitarena-vision)
