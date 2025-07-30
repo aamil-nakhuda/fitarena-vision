@@ -65,10 +65,10 @@ The project was conceptualized and executed as a solo participant for both the M
 
 This was a **solo project** built from concept to deployment:
 
-- **Research Lead**: Conducted more thane 15 hours of research on gamification, AI fitness, and pose estimation.
+- **Research Lead**: Conducted more than 15 hours of research on gamification, AI fitness, and pose estimation.
 - **Developer**: Wrote game logic and pose estimation pipelines in JS/Phaser.js.
 - **Designer**: Designed simple UI/UX for all age groups.
-- **Presenter**: Delivered formal research presentation at Aavishkar Research Convention and university evaluation.
+- **Presenter**: Delivered formal research presentation at Athe avishkar Research Convention and university evaluation.
 - **Tester**: Performed edge-case testing across devices.
 
 ---
@@ -78,14 +78,14 @@ The app was rigorously tested in the following ways:
 
 - **Functional Tests**: Pose tracking accuracy, game trigger accuracy & reliability
 - **Device Testing**: Verified compatibility with Chrome, Edge; tested on Android & Windows
-* **Unit Testing:** Verified core logic components like game and exercise counting and realt-time feedback on the exercise mistakes.
-* **Integration Testing:** Ensured smooth interaction across entire game.
+* **Unit Testing:** Verified core logic components like game and exercise counting, and real-time feedback on the exercise mistakes.
+* **Integration Testing:** Ensured smooth interaction across the entire game.
 * **System Testing:** Evaluated full app flow on physical devices.
 ---
 
 ## 📄 Documentation
 
-The complete documentation is available in PDF format 
+The complete documentation is available in PDF format
 ![Preview](docs/cover_page.png)  
 
 👉🔗 [Click here to read the full FitArena Vision Documentation (PDF))](docs/FitArena-Vision-Documentation.pdf)
